@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>food Ordering</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Food Ordering App</h1>
+      <form id="OrderFrom">
+        <div>
+          <label for="Food">Plih Makanan Buat Kak Gem</label>
+          <select id="Food">
+            <option value="0">----Select Parab----</option>
+            <option value="50">Telor Elang - 50$</option>
+            <option value="80">Daging Gajah - 80$</option>
+            <option value="30">Dodol Inggris - 30$</option>
+          </select>
+        </div>
+        <div>
+          <label for="Minuman">Plih Minuman Buat Kak Gem</label>
+          <select id="Minuman">
+            <option value="0">----Pilih Water----</option>
+            <option value="50">Es Teh Anget- 50$</option>
+            <option value="80">Air Putih - 80$</option>
+            <option value="30">Air Terjun - 30$</option>
+          </select>
+        </div>
+        <button type="button" id="OrderButton">Meli Moal?</button>
+      </form>
+      <div id="result"></div>
+    </div>
+    <script>
+      document.getElementById("OrderButton").onclick = function () {
+        const FoodPrice = parseInt(document.getElementById("Food").value);
+        const MinumanPrice = parseInt(document.getElementById("Minuman").value);
+
+        let TotalPrice = FoodPrice + MinumanPrice;
+        let Discount = 0;
+
+        if (TotalPrice > 100) {
+          Discount = TotalPrice * 0.1;
+          TotalPrice = TotalPrice - Discount;
+          //TotalPrice = TotalPrice - Discount -->
+        }
+        const resultDiv = document.getElementById("result");
+
+        if (TotalPrice > 0) {
+          resultDiv.innerHTML = `
+          Total: $${TotalPrice} <br>
+          Discount: $${Discount.toFixed(2)}<br>
+          Final Price : $${TotalPrice.toFixed(2)}`;
+        }
+      };
+    </script>
+  </body>
+</html>
