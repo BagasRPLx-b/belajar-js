@@ -32,28 +32,5 @@
       </form>
       <div id="result"></div>
     </div>
-    <script>
-      document.getElementById("OrderButton").onclick = function () {
-        const FoodPrice = parseInt(document.getElementById("Food").value);
-        const MinumanPrice = parseInt(document.getElementById("Minuman").value);
-
-        let TotalPrice = FoodPrice + MinumanPrice;
-        let Discount = 0;
-
-        if (TotalPrice > 100) {
-          Discount = TotalPrice * 0.1;
-          TotalPrice = TotalPrice - Discount;
-          //TotalPrice = TotalPrice - Discount -->
-        }
-        const resultDiv = document.getElementById("result");
-
-        if (TotalPrice > 0) {
-          resultDiv.innerHTML = `
-          Total: $${TotalPrice} <br>
-          Discount: $${Discount.toFixed(2)}<br>
-          Final Price : $${TotalPrice.toFixed(2)}`;
-        }
-      };
-    </script>
   </body>
 </html>
