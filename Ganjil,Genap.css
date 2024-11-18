@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.container{
+   width: 300px; 
+   padding: 20px; 
+   background-color: green;
+   text-align: center; 
+   border-radius: 5px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+     margin-bottom: 15px; 
+    color: white;
+}
+
+#limit-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+#start-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bef;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#start-btn:hover {
+    background-color: #0056b3;
+}
+
+#odd-numbers , #even-numbers{
+ margin-top: 5px;
+ color: #333;
+}
+
+
+
